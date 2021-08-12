@@ -16,6 +16,8 @@
 #include <QApplication>
 #include <QErrorMessage>
 #include <QTranslator>
+#include <kiwix/name_mapper.h>
+#include <kiwix/tools.h>
 
 
 class KiwixApp : public QtSingleApplication
@@ -115,6 +117,7 @@ private:
     TabBar* mp_tabWidget;
     SideBarType m_currentSideType;
     QErrorMessage* mp_errorDialog;
+    kiwix::HumanReadableNameMapper m_nameMapper;
     kiwix::Server m_server;
     Translation m_translation;
 
